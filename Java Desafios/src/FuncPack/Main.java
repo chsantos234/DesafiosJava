@@ -16,7 +16,7 @@ public class Main{
 		Funcionarios object = new Funcionarios();
 		
 		try {
-			JSONObject jsonObject = (JSONObject) Parser.parse(new FileReader("caminho do arquivo aqui"));
+			JSONObject jsonObject = (JSONObject) Parser.parse(new FileReader("caminho do arquivo aqui")); //Funcionarios-10K.json
 			JSONArray funcionarios = (JSONArray)jsonObject.get("funcionarios");
 			JSONArray areas = (JSONArray)jsonObject.get("areas");
 			
