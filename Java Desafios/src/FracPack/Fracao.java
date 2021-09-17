@@ -20,7 +20,7 @@ public class Fracao{
 	
 	public static void main(String[] args) throws Throwable{
 		Fracao obj = new Fracao();
-		File arquivo = new File("caminho do arquivo aqui");
+		File arquivo = new File("caminho do arquivo aqui"); // frac.txt
 		Scanner scFile = new Scanner(arquivo);
 		
 		while(scFile.hasNext()) {
