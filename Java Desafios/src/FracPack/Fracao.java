@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Fracao{
 	
-	public int MDC(int a,int b) { // retorna o mcd de dois n˙meros
+	public int MDC(int a,int b) { // retorna o mcd de dois n√∫meros
 		int mdc = 1;
 		int max = Math.max(a,b);
 		
@@ -20,7 +20,7 @@ public class Fracao{
 	
 	public static void main(String[] args) throws Throwable{
 		Fracao obj = new Fracao();
-		File arquivo = new File("C:\\Users\\camiq\\eclipse-workspace\\Java Desafios\\src\\frac.txt");
+		File arquivo = new File("camilho do arquivo aqui");
 		Scanner scFile = new Scanner(arquivo);
 		
 		while(scFile.hasNext()) {
@@ -29,7 +29,7 @@ public class Fracao{
 			String[] arrayString = fracao.split("/");
 			
 			if(arrayString.length == 1) {
-				System.out.println(arrayString[0]); // fraÁ„o sem divisor
+				System.out.println(arrayString[0]); // fra√ß√£o sem divisor
 			}
 			
 			else {
@@ -42,22 +42,22 @@ public class Fracao{
 					int resposta = a / b;
 					int mdc = obj.MDC(a,b);
 					
-					if(a%b == 0) { // divis„o direta sem resto (exata)
+					if(a%b == 0) { // divis√£o direta sem resto (exata)
 						System.out.println(resposta); 
 						
-					}else if(a%b != 0) { // divis„o com resto 
+					}else if(a%b != 0) { // divis√£o com resto 
 						int resto = a%b;
 
-						resto = resto/mdc; // simplificaÁ„o da fraÁ„o restante com mdc
+						resto = resto/mdc; // simplifica√ß√£o da fra√ß√£o restante com mdc
 						b = b/mdc;
 						
-						if(resposta != 0) { // divis„o ocorreu
+						if(resposta != 0) { // divis√£o ocorreu
 							System.out.println(resposta +" "+resto+"/"+b);
-						}else if(resposta == 0) {// divis„o n„o ocorreu
+						}else if(resposta == 0) {// divis√£o n√£o ocorreu
 							System.out.println(resto+"/"+b);
 						}
 					}
-				}catch(Exception e) { // divis„o por zero
+				}catch(Exception e) { // divis√£o por zero
 					System.out.println("ERR");
 				} 
 			}	
