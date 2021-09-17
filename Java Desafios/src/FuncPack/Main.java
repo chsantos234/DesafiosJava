@@ -16,11 +16,11 @@ public class Main{
 		Funcionarios object = new Funcionarios();
 		
 		try {
-			JSONObject jsonObject = (JSONObject) Parser.parse(new FileReader("C:\\Users\\camiq\\eclipse-workspace\\Java Desafios\\src\\Funcionarios-10K.json"));
+			JSONObject jsonObject = (JSONObject) Parser.parse(new FileReader("caminho do arquivo aqui"));
 			JSONArray funcionarios = (JSONArray)jsonObject.get("funcionarios");
 			JSONArray areas = (JSONArray)jsonObject.get("areas");
 			
-			// retirando os valores do maio e menor sal·rio mais a mÈdia
+			// retirando os valores do maio e menor sal√°rio mais a m√©dia
 			int numSalarios = 0;
 			float avgSalario = 0;
 			float minSalario = Float.MAX_VALUE;
@@ -41,7 +41,7 @@ public class Main{
 			}
 			avgSalario = avgSalario/numSalarios;
 			
-			// retornando o nome dos funcion·rios com estes sal·rios mais a mÈdia geral
+			// retornando o nome dos funcion√°rios com estes sal√°rios mais a m√©dia geral
 			String maxNomeCompleto = object.PesquisarSalario(maxSalario, funcionarios);
 			String minNomeCompleto = object.PesquisarSalario(minSalario, funcionarios);
 			System.out.printf("global_max|%s|%.2f%n",maxNomeCompleto, maxSalario);
@@ -58,7 +58,7 @@ public class Main{
 				String CodigoArea = ((JSONObject) areas.get(a)).get("codigo").toString();
 				String NomeArea = ((JSONObject) areas.get(a)).get("nome").toString();
 				
-				Area area = new Area(CodigoArea,NomeArea); // criando um objeto area para iteraÁıes na prÛxima quest„o
+				Area area = new Area(CodigoArea,NomeArea); // criando um objeto area para itera√ß√µes na pr√≥xima quest√£o
 				listaAreas.add(area);
 				for(int f = 0; f < funcionarios.size(); f++) {
 					
@@ -123,7 +123,7 @@ public class Main{
 							continue;
 						}else {
 							ignoreSobrenome.add(sobrenome);
-							object.PesquisarSobrenomeSal·rio(sobrenome,funcionarios);
+							object.PesquisarSobrenomeSal√°rio(sobrenome,funcionarios);
 						}
 					}
 				}
