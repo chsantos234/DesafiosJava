@@ -49,7 +49,10 @@ public class Funcionarios{
 		}
 		for(Area a : ListaAreas) {
 			if(a.getNumFuncionarios() == max) {
-				System.out.printf("most_employees|%s|%d\n",a.getNome(),a.NumFuncionarios);
+				String AreaNome = a.getNome();
+				char[] AreaChars = AreaNome.toCharArray();
+				char num = AreaChars[6];
+				System.out.printf("most_employees|Área %c|%d\n",num,a.NumFuncionarios);
 			}
 		}
 	}
@@ -63,12 +66,15 @@ public class Funcionarios{
 		}
 		for(Area a : ListaAreas) {
 			if(a.getNumFuncionarios() == min) {
-				System.out.printf("least_employees|%s|%d\n",a.getNome(),a.NumFuncionarios);
+				String AreaNome = a.getNome();
+				char[] AreaChars = AreaNome.toCharArray();
+				char num = AreaChars[6];
+				System.out.printf("least_employees|Área %c|%d\n",num,a.NumFuncionarios); // utf-8
 			}
 		}
 	}
 	
-	void PesquisarSobrenomeSal�rio(String sobrenomeInicial,JSONArray funcionarios) {
+	void PesquisarSobrenomeSalário(String sobrenomeInicial,JSONArray funcionarios) {
 		float max = 0;
 		for(int i = 0; i < funcionarios.size();i++) {
 			
