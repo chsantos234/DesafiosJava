@@ -86,9 +86,11 @@ public class Main{
 				if(AreaMaxNomeCompleto.equals("")) {
 					continue;
 				}else {
-					System.out.printf("area_max|%s|%s|%.2f%n",NomeArea,AreaMaxNomeCompleto, maxSalario);
-					System.out.printf("area_min|%s|%s|%.2f%n",NomeArea,AreaMinNomeCompleto, minSalario);
-					System.out.printf("area_avg|%s|%.2f%n",NomeArea,avgSalario);
+					char[] AreaChars = NomeArea.toCharArray();
+					char num = AreaChars[6];
+					System.out.printf("area_max|Área %c|%s|%.2f%n",num,AreaMaxNomeCompleto, maxSalario);
+					System.out.printf("area_min|Área %c|%s|%.2f%n",num,AreaMinNomeCompleto, minSalario);
+					System.out.printf("area_avg|Área %c|%.2f%n",num,avgSalario);
 				}
 			}
 			
