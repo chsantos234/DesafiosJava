@@ -74,7 +74,7 @@ public class Funcionarios{
 		}
 	}
 	
-	void PesquisarSobrenomeSalário(String sobrenomeInicial,JSONArray funcionarios) {
+	void PesquisarSobrenomeSalario(String sobrenomeInicial,JSONArray funcionarios) {
 		float max = 0;
 		for(int i = 0; i < funcionarios.size();i++) {
 			
