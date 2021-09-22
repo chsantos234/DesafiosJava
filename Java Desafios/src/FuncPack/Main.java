@@ -125,7 +125,7 @@ public class Main{
 							continue;
 						}else {
 							ignoreSobrenome.add(sobrenome);
-							object.PesquisarSobrenomeSalário(sobrenome,funcionarios);
+							object.PesquisarSobrenomeSalario(sobrenome,funcionarios);
 						}
 					}
 				}
